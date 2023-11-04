@@ -1,4 +1,4 @@
-# ChatbotForARestaurant_ByeLoaders
+# ChatbotForARestaurant_ByteLoaders
 Team Name: Byte Loaders
 Members:
      Eleonora Fernandes
