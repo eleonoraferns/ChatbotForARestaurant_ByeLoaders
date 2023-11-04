@@ -74,7 +74,7 @@ p {
 .btn-primary.btn-outline {
   background: transparent;
   color: #fb6e14;
-  border: 2px solid #fb6e14;
+  border: 2px solid #d5dbe3;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
   background: #fb6e14;
