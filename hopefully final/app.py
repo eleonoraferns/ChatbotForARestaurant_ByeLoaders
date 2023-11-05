@@ -1,0 +1,26 @@
+import streamlit as st
+import pandas as pd
+from langchain_experimental.agents.agent_toolkits.csv.base import create_csv_agent
+from langchain.llms import OpenAI
+st.title("Language Chain Experimental App")
+
+# Load your CSV file
+@st.cache
+def load_data():
+    return pd.read_csv('swiggy.csv')
+
+data = load_data()
+
+# Create a Streamlit input text box for user input
+user_input = st.text_input("Enter your input:")
+
+# Define a function to run your language model
+def run_language_model(input_text):
+    agent = create_csv_agent(OpenAI(temperature=0), 'swiggy.csv')
+    result = agent.run(input_text)
+    return result
+
+# Check if the user has entered input and display the result
+if user_input:
+    result = run_language_model(user_input)
+    st.write("Result:", result)
